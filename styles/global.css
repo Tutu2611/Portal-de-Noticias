@@ -13,12 +13,12 @@
   --text-color-secondary: #CBD5E1;
 
   --font-family: "Archivo", sans-serif;
-  --h1: 800 24px/135% var(--font-family);
-  --h2: 800 16px/140% var(--font-family);
-  --h3: 800 14px/140% var(--font-family);
-  --text-span: 600 14px/145% var(--font-family);
-  --text: 400 16px/140% var(--font-family);
-  --text-sm: 400 14px/160% var(--font-family);
+  --h1: 800 1.5rem/135% var(--font-family);
+  --h2: 800 1rem/140% var(--font-family);
+  --h3: 800 .875rem/140% var(--font-family);
+  --text-span: 600 .875rem/145% var(--font-family);
+  --text: 400 1rem/140% var(--font-family);
+  --text-sm: 400 .875rem/160% var(--font-family);
 
 }
 
@@ -47,14 +47,14 @@ img {
 
 .container {
   max-width: 1280px;
-  padding-inline: 32px;
+  padding-inline: 2rem;
   margin-inline: auto;
 }
 
 main {
-  margin-top: 40px;
-  row-gap: 80px;
-  column-gap: 32px;
+  margin-top: 2.5rem;
+  row-gap: 5rem;
+  column-gap: 2rem;
 
   grid-template-columns: 2fr 30%;
 
@@ -64,13 +64,13 @@ main {
   "ai aside";
 }
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   .container {
-    padding-inline: 24px;
+    padding-inline: 1.5rem;
   }
 
   main {
-    row-gap: 48px;
+    row-gap: 3rem;
     grid-template-columns: 1fr;
     grid-template-areas:
       "featured"
@@ -80,25 +80,38 @@ main {
   }
 }
 
-@media (max-width: 600px) {
-  .container {
-    padding-inline: 16px;
+@media (max-width: 37.5rem) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header.container {
+    order: 2;
   }
 
   main {
-    margin-top: 24px;
-    row-gap: 40px;
+    order: 1;
+  }
+
+  .container {
+    padding-inline: 1rem;
+  }
+
+  main {
+    margin-top: 1.5rem;
+    row-gap: 2.5rem;
   }
 }
 
 .content-tag {
   display: inline-block;
   background-color: var(--brand-color-dark);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font: 500 10px/1.2 var(--font-family);
+  padding: .25rem .5rem;
+  border-radius: .25rem;
+  font: 500 .625rem/1.2 var(--font-family);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--text-color-primary);
-  box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
+  box-shadow: 0px .25rem 1rem rgba(2, 6, 23, 0.25);
 }
