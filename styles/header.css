@@ -23,3 +23,27 @@
   border-inline: none;
   justify-content: space-between;
 }
+
+@media (max-width: 900px) {
+  #secondary {
+    grid-auto-flow: row;
+    row-gap: 12px;
+    justify-items: start;
+  }
+}
+
+@media (max-width: 600px) {
+  #primary {
+    padding-block: 16px;
+    gap: 12px;
+
+    div strong {
+      font-size: 14px;
+    }
+  }
+
+  #secondary {
+    padding-block: 12px;
+    row-gap: 8px;
+  }
+}
